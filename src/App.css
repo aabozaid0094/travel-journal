@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    background-color: #f55a5a;
+    color: #fff;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header svg {
+    display: block;
+    margin-right: 10px;
+    width: 2rem;
+    height: 2rem;
 }
-
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    header svg {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.travels {
+    padding: 4rem;
+}
+@media (max-width: 991px) {
+    .travels {
+        padding: 3rem;
+    }
+}
+@media (max-width: 550px) {
+    .travels {
+        padding: 1rem;
+    }
+}
+.travel-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+}
+div.travel-item:not(:last-of-type) {
+    border-bottom: 2px solid #eee;
+}
+@media (max-width: 991px) {
+    .travel-item {
+        flex-direction: column;
+    }
+}
+.travel-item > div {
+    flex-grow: 1;
+    padding: 1rem;
+}
+.travel-image {
+    display: block;
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  @media (max-width: 991px) {
+    .travel-image {
+    max-width:100%;
   }
+}
+@media (max-width: 550px) {
+  .travel-image {
+    height:400px;
+  }
+}
+.location {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.location svg {
+    display: block;
+    margin-right: 10px;
+    color: #f55a5a;
+}
+.location .location-map-link {
+    margin-left: 10px;
+    color: #777;
+}
+.travel-title {
+    font-size: 3rem;
+}
+.travel-period {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.travel-period > div:not(:last-of-type) {
+    margin-right: 10px;
+}
+.travel-description {
+    font-size: 1.5rem;
 }
